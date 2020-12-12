@@ -5,6 +5,7 @@ import ConfigPage from '../views/ConfigPage.vue'
 import Policy from '../views/Policy.vue'
 import Top from '../views/Top.vue'
 import Video from '../views/Video.vue'
+import MailAuth from '../views/MailAuth.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/video',
     name: 'video',
     component: Video
+  },
+  {
+    path: '/mailauth',
+    name: 'mailauth',
+    component: MailAuth
   },
   {
     path: '/about',

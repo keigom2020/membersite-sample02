@@ -14,7 +14,9 @@
       >ログアウト</button>
     </div>
 
-    <router-view/>
+    <div class="router-wrapper">
+      <router-view/>
+    </div>
 
     <footer class="footer">
       <div class="inner">
@@ -63,6 +65,10 @@ export default {
     }
   }
 }
+
+// .router-wrapper {
+//   margin-top: 58px;
+// }
 
 .fixed-area {
   position: absolute;
