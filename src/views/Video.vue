@@ -18,28 +18,28 @@
             :class="{ active: currentFilter === 'teacher' }" 
             @click="setFilter('teacher')"
           >
-            #お金の先生
+            #カテゴリ1
           </span>
           <span 
             class="filter" 
             :class="{ active: currentFilter === 'savings' }" 
             @click="setFilter('savings')"
           >
-            #貯蓄
+            #カテゴリ2
           </span>
           <span 
             class="filter" 
             :class="{ active: currentFilter === 'insurance' }" 
             @click="setFilter('insurance')"
           >
-            #保険
+            #カテゴリ3
           </span>
           <span 
             class="filter" 
             :class="{ active: currentFilter === 'investment' }" 
             @click="setFilter('investment')"
           >
-            #投資術
+            #カテゴリ4
           </span>
         </div>
 
@@ -107,44 +107,44 @@ export default {
       currentFilter: 'ALL',
       videos: [
         {
-          title: "ゼロからお金の先生ビジネス塾2つの質問",
+          title: "タイトル1",
           category: 'teacher',
           date: '2020/08/29',
-          path: 'https://player.vimeo.com/video/449276596',
+          path: 'https://player.vimeo.com/video/449708438',
           label: 'ここに動画の説明文が入ります',
-          tag: '#お金の先生',
+          tag: '#カテゴリ1',
         },
         {
-          title: "こんなセミナーです！",
+          title: "タイトル2",
           category: 'teacher',
           date: '2020/08/29',
-          path: 'https://player.vimeo.com/video/449276596',
+          path: 'https://player.vimeo.com/video/449708438',
           label: 'ここに動画の説明文が入ります',
-          tag: '#お金の先生',
+          tag: '#カテゴリ1',
         },
         {
-          title: "外貨建て保険の銀行窓販による苦情急増問題",
+          title: "タイトル3",
           category: 'insurance',
           date: '2020/08/29',
-          path: 'https://player.vimeo.com/video/449276596',
+          path: 'https://player.vimeo.com/video/449708438',
           label: 'ここに動画の説明文が入ります',
-          tag: '#保険',
+          tag: '#カテゴリ3',
         },
         {
-          title: "貯蓄術その１",
+          title: "タイトル4",
           category: 'savings',
           date: '2020/08/29',
-          path: 'https://player.vimeo.com/video/449276596',
+          path: 'https://player.vimeo.com/video/449708438',
           label: 'ここに動画の説明文が入ります',
-          tag: '#貯蓄',
+          tag: '#カテゴリ2',
         },
         {
-          title: "投資術その１",
+          title: "タイトル5",
           category: 'investment',
           date: '2020/08/29',
-          path: 'https://player.vimeo.com/video/449276596',
+          path: 'https://player.vimeo.com/video/449708438',
           label: 'ここに動画の説明文が入ります',
-          tag: '#投資術',
+          tag: '#カテゴリ4',
         },
       ]
     }
