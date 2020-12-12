@@ -1,0 +1,406 @@
+// ここに共通scssを記述する
+
+// Vue transition
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0.0;
+}
+
+// variable
+$main-color: #3f51b5;
+
+// utilityクラス
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .inner {
+    width: 94%;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  // background-color: #3f51b5;
+  // background-color: $main-color;
+  background-image: linear-gradient(90deg, #020024, #090979 35%, #00d4ff);
+  color: #fff;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.heading__lv2 {
+  span {
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow:0px 2px 8px lightgrey;
+  }
+  margin-bottom: 3rem;
+}
+
+.bg {
+  background-image: url(/img/bg01.da2b912f.jpg);
+  // background-attachment: fixed;
+  background-repeat: no-repeat;
+  // background-size: cover;
+
+  padding: 100px 0 80px;
+  position: relative;
+
+  min-height: 100vh;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(37,46,53,.7);
+    z-index: -1;
+  }
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #fff;
+  // height: 100vh;
+
+  
+  
+}
+
+html {
+  overflow-y: scroll; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style-type: none;
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body {
+  color: #fff;
+  transition: all 0.3s;
+  // background-image: url(/img/bg01.da2b912f.jpg);
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: rgba(37, 46, 53, 0.7);
+
+  position: relative;
+}
+
+
+
+// 見出し
+.heading {
+  &__lv2 {
+    font-size: 2rem;
+  }
+  &__lv3 {
+    font-size: 1.4rem;
+  }
+  &__lv4 {
+    font-size: 1rem;
+  }
+}
+
+// ボタン
+.btn {
+  // background-color: #3f51b5;
+  background-color: $main-color;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 6px auto 0;
+  transition: all 0.4s;
+  border: none;
+
+  cursor: pointer;
+}
+
+// タグ
+.tag__box {
+  display: flex;
+  margin-bottom: 16px;
+
+  .tag {
+    padding: 4px;
+    background-color: #17a2b8;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+}
+
+// リストボックス 3カラム,4カラム
+.list__box {
+  display: flex;
+  flex-wrap: wrap;
+
+  .list {
+    width: calc((100% / 2) - 10px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 24px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    background-color: #17a2b8;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  img {
+    height: 110px;
+  }
+
+  &.col__3 {
+    .list {
+      width: calc((100% / 3) - 14px);
+
+      &:nth-child(2n) {
+        margin-right: 20px;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+  &.col__4 {
+    .list {
+      width: calc((100% / 4) - 20px);
+
+      &:nth-child(2n) {
+        margin-right: 20px;
+      }
+      &:nth-child(4n) {
+        margin-right: 0x;
+      }
+    }
+  }
+
+  .list__bottom {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  // #app {
+  //   padding-top: 80px;
+  // }
+  .bg {
+    padding: 6rem 0 6rem;
+  }
+
+  .tag__box {
+    flex-direction: row;
+  }
+  .list__box {
+    // flex-direction: row;
+
+    .list {
+      width: 100%;
+
+      &:nth-child(3n) {
+        margin-right: 20px;
+      }
+    }
+
+    img {
+      height: auto;
+    }
+
+    &.col__3 {
+      .list {
+        width: 100%;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(3n) {
+          margin-right: 20px;
+        }
+      }
+    }
+    &.col__4 {
+      .list {
+        width: 100%;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(4n) {
+          margin-right: 0x;
+        }
+      }
+    }
+  }
+}
+
+// @mixin
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}
+
+// @keyframe
+@keyframes kf-img-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50.1% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes kf-cover-slide {
+  0% {
+    left: 0;
+    right: 100%;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100%;
+    right: 0;
+  }
+}
+
+// cover-slide
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.cover-slide {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    // z-index: 2;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eaebe6;
+
+    @include animation(
+      $name: kf-cover-slide
+    );
+  }
+  &.inview {
+    &::after {
+      @include animation(
+        $name: kf-cover-slide,
+        $duration: 1.6s,
+        $timing-function: ease-in-out,
+        // $fill-mode: normal
+      );
+    }
+  }
+}
+
+// hoverしたら拡大
+.inview {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-zoom {
+  opacity: 0;
+
+  .inview & {
+    opacity: 1;
+    transition: transform 0.6s ease;
+    @include animation(
+      $name: kf-img-show,
+      $duration: 1.6s,
+      $timing-function: ease-in-out,
+      $fill-mode: normal
+    );
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// hoverしたら暗くなる
+.hover-darken {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // z-index: 1;
+    z-index: 0;
+    transition: backgorund-color 0.3s ease;
+    pointer-events: none;
+    
+    background: rgba(0, 0, 0, 0.1);
+
+    @include animation(
+      $name: kf-img-show,
+      $duration: 1.6s,
+      $timing-function: ease-in-out,
+      $fill-mode: normal
+    );
+  }
+  &:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}

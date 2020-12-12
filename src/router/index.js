@@ -1,14 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import ConfigPage from '../views/ConfigPage.vue'
+import Policy from '../views/Policy.vue'
+import Top from '../views/Top.vue'
+import Video from '../views/Video.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
+  },
+  {
+    path: '/top',
+    name: 'top',
+    component: Top
+  },
+  {
+    path: '/configpage',
+    name: 'configpage',
+    component: ConfigPage
+  },
+  {
+    path: '/policy',
+    name: 'policy',
+    component: Policy
+  },
+  {
+    path: '/video',
+    name: 'video',
+    component: Video
   },
   {
     path: '/about',
