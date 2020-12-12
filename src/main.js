@@ -16,14 +16,13 @@ Vue.config.productionTip = false
 // Vue.use(VueAxios, axios)
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA2LvxgSi8MCQ-5luuTfGhLoM6kHpMSgws",
-  authDomain: "member-site03.firebaseapp.com",
-  databaseURL: "https://member-site03.firebaseio.com",
-  projectId: "member-site03",
-  storageBucket: "member-site03.appspot.com",
-  messagingSenderId: "130743359196",
-  appId: "1:130743359196:web:3c14c696957ac28e790619",
-  measurementId: "G-XLZM28XB9Q"
+  apiKey: "AIzaSyAPUlUwQ10TIrsDk0s2-jaiBUsCAUVNjWc",
+    authDomain: "membersite-sample02.firebaseapp.com",
+    projectId: "membersite-sample02",
+    storageBucket: "membersite-sample02.appspot.com",
+    messagingSenderId: "700501628693",
+    appId: "1:700501628693:web:7d0904e3ce3dafd5cffb1c",
+    measurementId: "G-E40G21G2R1"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
