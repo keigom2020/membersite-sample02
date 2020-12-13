@@ -1,5 +1,10 @@
 # membersite-sample02
 
+
+## 【今後しなきゃいけないこと】
+- storeにある既存のlogin関数にメールログインとGoogleアカウントログインを差別化するif文を書く
+- メールログイン部分のログインコード移植
+
 ## Project setup
 ```
 npm install
