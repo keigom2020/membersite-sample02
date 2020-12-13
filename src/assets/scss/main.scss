@@ -76,9 +76,6 @@ $main-color: #3f51b5;
   text-align: center;
   color: #fff;
   // height: 100vh;
-
-  
-  
 }
 
 html {
@@ -214,9 +211,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  // #app {
-  //   padding-top: 80px;
-  // }
+  
   .bg {
     padding: 6rem 0 6rem;
   }
@@ -225,7 +220,6 @@ body {
     flex-direction: row;
   }
   .list__box {
-    // flex-direction: row;
 
     .list {
       width: 100%;
