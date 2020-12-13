@@ -14,13 +14,7 @@ require("firebaseui-ja/dist/firebaseui.css");
 Vue.config.productionTip = false
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCE3dVZUeSa6NStcVGE5PROlFw5vPXB2UY",
-  authDomain: "membersite-sample02-27020.firebaseapp.com",
-  projectId: "membersite-sample02-27020",
-  storageBucket: "membersite-sample02-27020.appspot.com",
-  messagingSenderId: "743011557983",
-  appId: "1:743011557983:web:a221241c2a71a1ad9471ea",
-  measurementId: "G-KTE96GBB8W"
+  
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
