@@ -26,7 +26,6 @@ export default new Vuex.Store({
       commit('deleteLoginUser')
     },
     logout () {
-      // firebase.auth().signOut()
       if(window.confirm('ログアウトしてよろしいですか？')) {
         firebase.auth().signOut()
       }
@@ -37,7 +36,7 @@ export default new Vuex.Store({
       // if () {
 
       // } else {
-        
+
       // }
       const google_auth_provider = new firebase.auth.GoogleAuthProvider()
       firebase.auth().signInWithRedirect(google_auth_provider)
