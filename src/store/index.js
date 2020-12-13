@@ -9,7 +9,6 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     login_user: null,
-    // drawer: false,
   },
   mutations: {
     setLoginUser (state, user) {
@@ -18,9 +17,6 @@ export default new Vuex.Store({
     deleteLoginUser (state) {
       state.login_user = null
     },
-    // toggleSideMenu (state) {
-    //   state.drawer = !state.drawer
-    // },
   },
   actions: {
     setLoginUser ({ commit }, user) {
@@ -36,13 +32,18 @@ export default new Vuex.Store({
       }
     },
     login () {
+      // GoogleアカウントでのログインかID/PWでのログインかを判定する
+
+      // if () {
+
+      // } else {
+        
+      // }
       const google_auth_provider = new firebase.auth.GoogleAuthProvider()
       firebase.auth().signInWithRedirect(google_auth_provider)
     },
     
-    // toggleSideMenu ({ commit }) {
-    //   commit('toggleSideMenu')
-    // },
+    
   },
   getters: {
     userName: state => state.login_user ? state.login_user.displayName : '',
