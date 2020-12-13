@@ -32,7 +32,7 @@ export default new Vuex.Store({
     },
     login () {
       // GoogleアカウントでのログインかID/PWでのログインかを判定する
-
+      // クリックされたボタンのクラスで判別する？ .googleBtn, .mailBtnのような、、、
       // if () {
 
       // } else {
@@ -42,7 +42,21 @@ export default new Vuex.Store({
       firebase.auth().signInWithRedirect(google_auth_provider)
     },
     
-    
+    // mailLogin() {
+    //   console.log(this.email);
+    //   console.log(this.password);
+    //   firebase
+    //     .auth()
+    //     .signInWithEmailAndPassword(this.email, this.password)
+    //     .then(function(res) {
+    //       console.log(res)
+    //       alert("ログインできました");
+    //     })
+    //     .catch(function (error) {
+    //       alert("ログインできません（" + error.message + "）");
+    //     });
+    // },
+
   },
   getters: {
     userName: state => state.login_user ? state.login_user.displayName : '',
