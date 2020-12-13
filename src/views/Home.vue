@@ -29,6 +29,7 @@
       </form>
 
       <h2 class="heading__lv2">Googleアカウントでログイン</h2>
+      <div>※クリックするとGoogleアカウントを選択する画面に移動します</div>
       <button 
         class="btn"
         @click="login"
@@ -53,6 +54,8 @@ export default {
   },
   methods: {
     ...mapActions(['login']),
+    
+    // 下記のmailLogin()はstore/index.jsに移動したい
     mailLogin() {
       console.log(this.email);
       console.log(this.password);
