@@ -49,7 +49,6 @@ export default {
   },
   methods: {
     ...mapActions(['setLoginUser', 'logout', 'deleteLoginUser'])
-    // ...mapActions(['setLoginUser'])
   }
 }
 </script>
